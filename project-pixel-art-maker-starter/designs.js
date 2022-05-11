@@ -3,9 +3,9 @@ document.getElementById("sizePicker").addEventListener("submit", function(event)
     //prevents page refresh
     event.preventDefault();
     //gets height value
-    const inputHeight = document.getElementById("inputHeight").value;
+    var inputHeight = document.getElementById("inputHeight").value;
     //gets width value
-    const inputWidth = document.getElementById("inputWidth").value;
+    var inputWidth = document.getElementById("inputWidth").value;
     //makes the grid, passes selected height and width needed
     makeGrid(inputHeight, inputWidth);
 });
