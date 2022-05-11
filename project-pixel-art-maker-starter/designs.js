@@ -1,9 +1,3 @@
-// Select color input
-// Select size input
-var height, width, color;
-// const colorPicker = document.getElementById("colorPicker");
-const pixelCanvas = document.getElementById("pixelCanvas");
-
 // add event on click (submit button)
 document.getElementById("sizePicker").addEventListener("submit", function(event){
     //prevents page refresh
