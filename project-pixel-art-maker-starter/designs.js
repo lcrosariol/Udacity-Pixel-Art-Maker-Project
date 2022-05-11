@@ -6,7 +6,6 @@ document.getElementById("sizePicker").addEventListener("submit", function(event)
     const inputHeight = document.getElementById("inputHeight").value;
     //gets width value
     const inputWidth = document.getElementById("inputWidth").value;
-    //calls makeGrid function to make a grid with the input values
     makeGrid(inputHeight, inputWidth);
 });
 
