@@ -14,8 +14,6 @@ document.getElementById("sizePicker").addEventListener("submit", function(event)
 
 //makeGrid function makes the grid
 function makeGrid(inputHeight, inputWidth) {
-
-    const colorPicker = document.getElementById("colorPicker");
     // iterate over the rows and columns and add them to the grid
     for (var i = 0; i < inputHeight; i++) {
         //insert rows
@@ -25,7 +23,7 @@ function makeGrid(inputHeight, inputWidth) {
                 let cell = row.insertCell(j);
                 //add selected color to the cell
                 cell.addEventListener("click", function(event) {
-                    event.target.style.backgroundColor = colorPicker.value;
+                    event.target.style.backgroundColor = document.getElementById("colorPicker").value;
                 });
             };
     };
