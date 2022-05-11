@@ -6,6 +6,7 @@ document.getElementById("sizePicker").addEventListener("submit", function(event)
     const inputHeight = document.getElementById("inputHeight").value;
     //gets width value
     const inputWidth = document.getElementById("inputWidth").value;
+    //makes the grid, passes selected height and width needed
     makeGrid(inputHeight, inputWidth);
 });
 
@@ -15,9 +16,11 @@ function makeGrid(inputHeight, inputWidth) {
     pixelCanvas.innerHTML= "";
     let colorPicker = document.getElementById("colorPicker");
     // iterate over the rows and columns and add them to the grid
-    for (var i = 0; i < inputHeight; i++) {
-        var row = pixelCanvas.insertRow(i);
-            for (var j = 0; j < inputWidth; j++){
+    for (let i = 0; i < inputHeight; i++) {
+        //insert rows
+        let row = pixelCanvas.insertRow(i);
+            for (let j = 0; j < inputWidth; j++){
+                //insert cells
                 let cell = row.insertCell(j);
                 //add selected color to the cell
                 cell.addEventListener("click", function(event) {
