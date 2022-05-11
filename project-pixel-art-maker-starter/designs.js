@@ -2,6 +2,8 @@
 document.getElementById("sizePicker").addEventListener("submit", function(event){
     //prevents page refresh
     event.preventDefault();
+    //remove any existing table rows, which will remove the table data's as well
+    document.getElementById("pixelCanvas").innerHTML = "";
     //gets height value
     const inputHeight = document.getElementById("inputHeight").value;
     //gets width value
@@ -12,8 +14,7 @@ document.getElementById("sizePicker").addEventListener("submit", function(event)
 
 //makeGrid function makes the grid
 function makeGrid(inputHeight, inputWidth) {
-    //remove any existing table rows, which will remove the table data's as well
-    pixelCanvas.innerHTML= "";
+
     const colorPicker = document.getElementById("colorPicker");
     // iterate over the rows and columns and add them to the grid
     for (var i = 0; i < inputHeight; i++) {
